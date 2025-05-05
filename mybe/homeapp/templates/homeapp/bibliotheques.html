@@ -1,0 +1,132 @@
+{% extends 'homeapp/base.html' %}
+{% block content %}
+{% load static %}
+<!-- Courses Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+            <h6 class="section-title bg-white text-center text-primary px-3">Courses</h6>
+            <h1 class="mb-5">Les bilbiotheques</h1>
+        </div>
+        <div class="row g-4 justify-content-center">
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="course-item bg-light">
+                    <div class="position-relative overflow-hidden">
+                        <img class="img-fluid" src="{% static 'img/carousel-1.jpg' %}" alt="">
+                        <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
+                            <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Read More</a>
+                            
+                        </div>
+                    </div>
+                    <div class="text-center p-4 pb-0">
+                        <h5 class="mb-4">bilbiotheques Godomey</h5>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="course-item bg-light">
+                    <div class="position-relative overflow-hidden">
+                        <img class="img-fluid" src="{% static 'img/carousel-2.jpg' %}" alt="">
+                        <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
+                            <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Read More</a>
+                        </div>
+                    </div>
+                    <div class="text-center p-4 pb-0">
+                        <h5 class="mb-4">bilbiotheques Calavi</h5>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Courses End -->
+<!-- Bibliothèque Detail Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-5">
+            {% comment %} <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
+                <div class="position-relative h-100">
+                    <img class="img-fluid position-absolute w-100 h-100" src="{% static 'img/carousel-2.jpg' %}" alt="" style="object-fit: cover;">
+                </div>
+            </div> {% endcomment %}
+            <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.3s">
+                <h6 class="section-title bg-white text-start text-primary pe-3">Détails de la bibliothèque</h6>
+                <h1 class="mb-4"></h1>
+                <p class="mb-4"> Lesdites bibliothèques abritent également des laboratoires d’apprentissage de langues que sont :<br>
+                    <div style="margin-left:70px;">
+                        <b>+ </b>Anglais<br>
+                        <b>+ </b>Allemand<br>
+                        <b>+ </b> et Espagnol.<br>
+                        
+                       </div>
+                    
+                    Par ailleurs, l’organisation a aménagé un laboratoire d’intelligence artificielle qui offre des formations sur l’intelligence artificielle. Dans le même sens, un club est créé pour permettre aux passionnés de cette technologie innovante de passer rapidement à l’étape de prototypage pour leurs projets.
+
+Notons qu’en 2021, Bénin Excellence a aménagé un Point Lecture à la Faculté des Sciences de la Santé à Cotonou, pour permettre aux jeunes étudiants en médecine ainsi qu’aux praticiens d’avoir les ressources nécessaires pour exercer leur métier convenablement. En tout, ce sont des centaines de livres d’éditions récentes abordant toutes les branches du domaine médical qui sont mis à la disposition de ces professionnels de la santé.
+
+Toutefois, l’activité des deux bibliothèques ne se limite pas à la lecture. D’autres activités sont organisées dans le but d’encourager la promotion de l’excellence sur divers plans.
+
+Ces activités sont de plusieurs ordres :</p>
+
+                <h6 class="section-title bg-white text-start text-primary pe-3">Le Concours de dictée</h6>
+                <p class="mb-4">Dénommé “La dictée de l’excellence”, ce concours de dictée vise à éveiller et encourager l’excellence auprès d’un public particulièrement jeune : les écoliers et les élèves. Il promeut la maîtrise des règles grammaticales, d’orthographe et de conjugaison en Français. C’est également une occasion pour la cible visée d’enrichir son vocabulaire.
+                    Elle se déroule de façon annuelle, dans la deuxième moitié du mois de décembre, au sein des bibliothèques Bénin Excellence.
+                    Les lauréats repartent avec de nombreux lots dont des ordinateurs, des tablettes, des vélos et de nombreuses fournitures scolaires, selon leur niveau.</p>
+
+                <h6 class="section-title bg-white text-start text-primary pe-3">Le Concours Kalet’Arts</h6>
+                <p class="mb-4">
+                    Le Kalet’arts est un événement artistique et socioculturel qui a pour ambition de réunir plus de 1.000 personnes, afin de valoriser le masque kaléta, dans un esprit festif et compétitif…
+                    Deux activités phares sont au programme de cet événement qui se veut être le tremplin idéal au divertissement et à l’épanouissement des membres de la communauté d’Abomey-Calavi. L’évènement est jalonné par des prestations comiques et artistiques. Plusieurs troupes de kaléta sont mises en compétition pour déterminer les meilleurs d’entre elles afin de les primer par ordre de mérite.
+                    Cet événement a une connotation sociale car elle a pour objectif premier de faire passer des vacances de Noël agréables à la population d’Abomey-Calavi et environs en général, et aux enfants et adolescents en particulier.</p>
+
+                <h6 class="section-title bg-white text-start text-primary pe-3">Le Concours de poésie</h6>
+                <p class="mb-4">Le concours de poésie est organisé dans le courant de la célébration des droits de la femme, pour lui rendre 
+                    hommage, et par la même occasion, 
+                    détecter les meilleures plumes. Les candidats répartis en deux catégories (junior et sénior) déposent leurs
+                     productions,
+                     en tenant compte du thème fourni. Un jury se charge ensuite de juger de la pertinence de leurs écrits. Enfin, 
+                     une soirée de déclamation des meilleurs textes retenus est organisée dans l’une des bibliothèques Bénin Excellence. Au cours de cette soirée, les gagnants repartent avec des trophées et des enveloppes financières.</p>
+
+
+
+                <h6 class="section-title bg-white text-start text-primary pe-3">Les Animations</h6>
+                <p class="mb-4">Pendant les congés et les grandes vacances, des animations sont également faites pour instruire 
+                    ou divertir les bibliophiles et les aider à se détendre. Pendant ces périodes de détente sont organisés des 
+                    jeux de : ludo, cartes, scrabble, awalé, babyfoot, etc.
+
+                    De même, la projection de films et l’organisation de conférences-débats enrichissent le programme. Ces dernières
+                     aident les participants à découvrir les facettes d’un métier et d’autres connaissances telles que les règles de
+                      bienséance. Au-delà du divertissement, c’est une formation humaine qui est délivrée aux participants pendant ces moments.</p>
+
+                <h6 class="section-title bg-white text-start text-primary pe-3">Les Cérémonies</h6>
+                <p class="mb-4">Les bibliothèques Bénin Excellence abritent également plusieurs cérémonies :<br>
+
+                    <div style="margin-left:70px;">
+                     <b>+ </b> conférences<br>
+                     <b>+ </b>lancement de livres d’auteurs nationaux ou internationaux<br>
+                     <b>+ </b>formations<br>
+                     <b>+ </b>assemblées générales d’ONG<br>
+                     <b>+ </b>cérémonies de remises de dons, etc</p><br>
+                    </div>
+                <h6 class="section-title bg-white text-start text-primary pe-3">Les Projets</h6>
+                <p class="mb-4">Bénin Excellence nourrit aussi de fructueuses collaborations avec plusieurs organisations. De ces collaborations naissent des projets à caractère éducatif, social ou culturel.
+                    C’est le cas de L’Ecole d’Eté sur l’Intelligence Artificielle (EEIA). L’EEIA est un programme qui vise à former de façon pragmatique et qualitative (25% de théorie et 75% de pratique), une centaine de jeunes sur les notions de base de l’Intelligence Artificielle.
+                    
+                    Nous avons également le Programme d’Initiation aux Métiers et à l’Entrepreneuriat (PIME) et Biblio-corporate.
+                    
+                    En savoir plus sur ces projets :
+                    
+                    <li><a>Ecole d’Eté sur l’Intelligence Artificielle (EEIA), </a></li>
+                    <li><a>PIME, </a></li>
+                    <li><a>Biblio-corporate. </a></li>
+                    
+                </p>
+                <a class="btn btn-primary py-3 px-5 mt-2" href="/">Retour à l'accueil</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Bibliothèque Detail End -->
+{% endblock %}

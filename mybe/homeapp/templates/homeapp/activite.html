@@ -1,0 +1,103 @@
+{% extends 'homeapp/base.html' %}
+{% block content %}
+{% load static %}
+<!-- Courses Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+            <h6 class="section-title bg-white text-center text-primary px-3">Nos Activités</h6>
+            <h5 class="mb-5">Dans le but d’atteindre les objectifs qu’elle s’est assignée, Bénin
+                 Excellence a développé des projets décomposés en plusieurs activités.</h5>
+            <h1 class="mb-5">Que fait donc l'Association Bénin Excellence ?</h1>
+        </div>
+        <div class="row g-4 justify-content-center">
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="course-item bg-light">
+                    <div class="position-relative overflow-hidden">
+                        <img class="img-fluid" src="{% static 'img/carousel-1.jpg' %}" alt="">
+                        <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
+                            <a href="{% url 'bilbiotheques' %}" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Read More</a>
+                            
+                        </div>
+                    </div>
+                    <div class="text-center p-4 pb-0">
+                        <h5 class="mb-4">Volet Education-Implantation des trois plus grandes bibliothèques</h5>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="course-item bg-light">
+                    <div class="position-relative overflow-hidden">
+                        <img class="img-fluid" src="{% static 'img/activite-1.jpg' %}" alt="">
+                        <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
+                            <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;"></a>
+                        </div>
+                    </div>
+                    <div class="text-center p-4 pb-0">
+                        <h5 class="mb-4"></h5>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="course-item bg-light">
+                    <div class="position-relative overflow-hidden">
+                        <img class="img-fluid" src="{% static 'img/carousel-2.jpg' %}" alt="">
+                        <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
+                            <a href="{% url 'bilbiotheques' %}" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Read More</a>
+                        </div>
+                    </div>
+                    <div class="text-center p-4 pb-0">
+                        <h5 class="mb-4"> Co-gestion des Ecoles d'Eté en collaboration avec la Fondation Vallet</h5>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="course-item bg-light">
+                    <div class="position-relative overflow-hidden">
+                        <img class="img-fluid" src="{% static 'img/activite-2.jpg' %}" alt="">
+                        <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
+                            <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;"></a>
+                        </div>
+                    </div>
+                    <div class="text-center p-4 pb-0">
+                        <h5 class="mb-4"></h5>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="course-item bg-light">
+                    <div class="position-relative overflow-hidden">
+                        <img class="img-fluid" src="{% static 'img/carousel-2.jpg' %}" alt="">
+                        <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
+                            <a href="{% url 'bilbiotheques' %}" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Read More</a>
+                        </div>
+                    </div>
+                    <div class="text-center p-4 pb-0">
+                        <h5 class="mb-4"> Volet socio sanitaire-Appuie des établissements pénitentiaires</h5>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="course-item bg-light">
+                    <div class="position-relative overflow-hidden">
+                        <img class="img-fluid" src="{% static 'img/activite-3.jpg' %}" alt="">
+                        <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
+                            <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;"></a>
+                        </div>
+                    </div>
+                    <div class="text-center p-4 pb-0">
+                        <h5 class="mb-4"></h5>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Courses End -->
+{% endblock %}

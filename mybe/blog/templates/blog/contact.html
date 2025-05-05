@@ -1,0 +1,50 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block content %}
+<section class="section wb">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 offset-lg-1">
+                <div class="page-wrapper">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <h4>Qui sommes-nous</h4>
+                            <p>Forest Time is a personal blog for handcrafted, cameramade photography content, fashion styles from independent creatives around the world.</p>
+                        </div>
+
+                        <div class="col-lg-4">
+                            <h4>Comment pouvons-nous vous aider?</h4>
+                            <p>Etiam vulputate urna id libero auctor maximus. Nulla dignissim ligula diam, in sollicitudin ligula congue quis turpis dui urna nibhs. </p>
+                        </div>
+
+                        <div class="col-lg-4">
+                            <h4>Questions ? </h4>
+                            <p>Fusce dapibus nunc quis quam tempor vestibulum sit amet consequat enim. Pellentesque blandit hendrerit placerat. Integertis non.</p>
+                        </div>
+                    </div><!-- end row -->
+
+                    <hr class="invis">
+                    {% if messages %}
+                    <div class="alert alert-info">
+                        {% for message in messages %}
+                            <p>{{ message }}</p>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                    <div class="row">
+                        <div class="col-lg-8 offset-lg-2">
+                            <form class="form-wrapper" method="POST">
+                                {% csrf_token %}
+                                <input type="text" class="form-control" name="name" placeholder="Votre nom" required>
+                                <input type="email" class="form-control" name="email" placeholder="Votre addresse Email" required>
+                                <textarea class="form-control" name="message" placeholder="Votre message ici" required></textarea>
+                                <button type="submit" class="btn btn-primary">Envoyer <i class="fa fa-envelope-open-o"></i></button>
+                            </form>                            
+                        </div>
+                    </div>
+                </div><!-- end page-wrapper -->
+            </div><!-- end col -->
+        </div><!-- end row -->
+    </div><!-- end container -->
+</section>
+{% endblock %}

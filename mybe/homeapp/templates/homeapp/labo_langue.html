@@ -1,0 +1,22 @@
+
+{% extends 'homeapp/base.html' %}
+{% block content %}
+{% load static %}
+    <!-- Contact Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            {% for labo in labo_langues %}
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center text-primary px-3">Nos laboratoires</h6>
+                <h1 class="mb-5">Nos laboratoires de langue</h1>
+            </div>
+            <div class="row g-4">
+                
+               <p> {{ labo.description|safe }} </p>
+                 
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <!-- Contact End -->
+{% endblock %}

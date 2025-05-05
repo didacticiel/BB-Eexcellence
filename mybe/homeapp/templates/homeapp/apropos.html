@@ -1,0 +1,163 @@
+{% extends 'homeapp/base.html' %}
+{% block content %}
+{% load static %}
+
+<!-- Service Start -->
+<!-- <div class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item text-center pt-3">
+                    <div class="p-4">
+                        <i class="fa fa-3x fa-graduation-cap text-primary mb-4"></i>
+                        <h5 class="mb-3">Skilled Instructors</h5>
+                        <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="service-item text-center pt-3">
+                    <div class="p-4">
+                        <i class="fa fa-3x fa-globe text-primary mb-4"></i>
+                        <h5 class="mb-3">Online Classes</h5>
+                        <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="service-item text-center pt-3">
+                    <div class="p-4">
+                        <i class="fa fa-3x fa-home text-primary mb-4"></i>
+                        <h5 class="mb-3">Home Projects</h5>
+                        <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+                <div class="service-item text-center pt-3">
+                    <div class="p-4">
+                        <i class="fa fa-3x fa-book-open text-primary mb-4"></i>
+                        <h5 class="mb-3">Book Library</h5>
+                        <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+<!-- Service End -->
+
+
+<!-- About Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
+                <div class="position-relative h-100">
+                    <img class="img-fluid position-absolute w-100 h-100" src="{% static 'img/about.jpg' %}" alt="" style="object-fit: cover;">
+                </div>
+            </div>
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                <h6 class="section-title bg-white text-start text-primary pe-3">Qui Sommes-Nous</h6>
+                <h1 class="mb-4">Welcome to eLEARNING</h1>
+                <p class="mb-4">Créée le 19 mai 2018 à Cotonou, Bénin Excellence est une Organisation 
+                    Non Gouvernementale à but non lucratif, régie par la loi du 1er juillet 1901 relative aux contrat 
+                    d’association et par le décret 2001-234 du 12 juillet 2001, fixant les modalités de fonctionnement des ONG en République du Bénin. Elle entend contribuer au développement à travers la promotion du Capital Humain par l’Excellence dans tous les domaines notamment l’Éducation, la culture et la Santé.
+                   </p>
+                <p class="mb-4">« <b>Bénin Excellence, l’Excellence en partage</b> », tel que l’exprime son slogan, témoigne bien de l’ambition et de l’étendue des missions.</p>
+                <div class="row gy-2 gx-4 mb-4">
+                    <div class="col-sm-6">
+                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Nos Missions</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Nos Objectifs</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Nos Valeurs</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Notre Particularité</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Nos Activités</p>
+                    </div>
+                </div>
+                <a class="btn btn-primary py-3 px-5 mt-2" href="{% url 'activite' %}">Laissez vous guider sur la page de nos activités </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- About End -->
+
+<!-- Service Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item text-center pt-3">
+                    <div class="p-4">
+                        <i class="fa fa-3x  text-primary mb-4"></i>
+                        <h5 class="mb-3">01 Nos Missions</h5>
+                        <p>Depuis sa création, Bénin Excellence s’est engagée à :
+
+                            Faciliter l’accès à des soins de qualité aux personnes en situation de vulnérabilité,
+                            Soutenir le système éducatif béninois en accompagnant la pédagogie et la recherche,
+                            Promouvoir l’art, la culture et le tourisme,
+                            Encourager les pratiques écoresponsables.
+                            Pour accomplir ces missions, elle élabore et/ou met en œuvre des programmes/projets à court, moyen et long termes, dans le cadre d’un développement intégré tenant compte des besoins exprimés par les différentes parties prenantes.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="service-item text-center pt-3">
+                    <div class="p-4">
+                        <i class="fa fa-3x text-primary mb-4"></i>
+                        <h5 class="mb-3">02 Nos Objectifs</h5>
+                        <p>Les objectifs que poursuit l’ONG Bénin Excellence sont de plusieurs ordres : 
+
+                            Être un acteur majeur de l'éducation, de la chaîne du livre et de la culture au Bénin,
+                            Contribuer à la santé et à l'épanouissement des personnes vivant dans les milieux fermés (établissements pénitentiaires),
+                            Être une tribune d’expression artistique et culturelle,
+                            Explorer d’autres domaines pour impacter durablement la communauté.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="service-item text-center pt-3">
+                    <div class="p-4">
+                        <i class="fa fa-3x text-primary mb-4"></i>
+                        <h5 class="mb-3">03 Nos Valeurs</h5>
+                        <p>Bénin Excellence entretient et nourrit des valeurs nobles telles que : 
+
+                            Une démarche participative, 
+                            La promotion du genre,
+                            L’équité,
+                            La transparence,
+                            Le professionnalisme et
+                            L’innovation.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+                <div class="service-item text-center pt-3">
+                    <div class="p-4">
+                        <i class="fa fa-3x text-primary mb-4"></i>
+                        <h5 class="mb-3">04 Notre Particularité</h5>
+                        <p>Ce qui nous démarque, c’est la gestion axée sur les résultats et l’excellence que nous visons dans toutes les interventions.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="service-item text-center pt-3">
+                    <div class="p-4">
+                        <i class="fa fa-3x  text-primary mb-4"></i>
+                        <h5 class="mb-3">05 Nos Activités</h5>
+                        <p>Dans le but d’atteindre les objectifs qu’elle s’est assignée, Bénin Excellence a développé des projets décomposés en plusieurs activités.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Service End -->
+{% endblock %}

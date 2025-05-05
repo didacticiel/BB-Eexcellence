@@ -1,0 +1,257 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block content %}
+
+<section class="section first-section">
+    <div class="container-fluid">
+        <div class="masonry-blog clearfix">
+            {% for post in menu_home %}
+            <div class="left-side">
+                <div class="masonry-box post-media">
+                     <img src="{{post.image.url}}" alt="" class="img-fluid">
+                     <div class="shadoweffect">
+                        <div class="shadow-desc">
+                            <div class="blog-meta">
+                                <span class="bg-aqua"><a href="{% url 'detail' post.id %}" title="">{{post.category}}</a></span>
+                                <h4><a href="{% url 'detail' post.id %}" title="">{{post.title}}</a></h4>
+                                <small><a href="{% url 'detail' post.id %}" title="">{{post.publish}}</a></small>
+                                <small><a href="{% url 'detail' post.id %}" title="">{{post.author}}</a></small>
+                            </div><!-- end meta -->
+                        </div><!-- end shadow-desc -->
+                    </div><!-- end shadow -->
+                </div><!-- end post-media -->
+            </div><!-- end left-side -->
+            {% endfor %}
+            {% for post in populaire %}
+            <div class="center-side">
+                <div class="masonry-box post-media">
+                     <img src="{{post.image.url}}" alt="" class="img-fluid">
+                     <div class="shadoweffect">
+                        <div class="shadow-desc">
+                            <div class="blog-meta">
+                                <span class="bg-aqua"><a href="{% url 'detail' post.id %}" title="">{{post.category}}</a></span>
+                                <h4><a href="{% url 'detail' post.id %}" title="">{{post.title}}</a></h4>
+                                <small><a href="{% url 'detail' post.id %}" title="">{{post.publish}}</a></small>
+                                <small><a href="{% url 'detail' post.id %}" title="">{{post.author}}</a></small>
+                            </div><!-- end meta -->
+                        </div><!-- end shadow-desc -->
+                    </div><!-- end shadow -->
+                </div><!-- end post-media -->
+                
+            </div><!-- end left-side -->
+            {% endfor %}
+            {% for post in politique %}
+            <div class="right-side hidden-md-down">
+                <div class="masonry-box post-media">
+                     <img src="{{post.image.url}}" alt="" class="img-fluid">
+                     <div class="shadoweffect">
+                        <div class="shadow-desc">
+                            <div class="blog-meta">
+                                <span class="bg-aqua"><a href="{% url 'detail' post.id %}" title="">{{post.category}}</a></span>
+                                <h4><a href="{% url 'detail' post.id %}" title="">{{post.title}}</a></h4>
+                                <small><a href="{% url 'detail' post.id %}" title="">{{post.publish}}</a></small>
+                                <small><a href="{% url 'detail' post.id %}" title="">{{post.author}}</a></small>
+                            </div><!-- end meta -->
+                        </div><!-- end shadow-desc -->
+                     </div><!-- end shadow -->
+                </div><!-- end post-media -->
+            </div><!-- end right-side -->
+            {% endfor %}
+        </div><!-- end masonry -->
+    </div>
+</section> 
+
+<section class="section wb">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
+                <div class="page-wrapper">
+                    <div class="blog-list clearfix">
+                        {% for post in posts %}
+                        <div class="blog-box row" class="mb-5">
+                            <div class="col-md-4">
+                                <div class="post-media">
+                                    <a href="{% url 'blog:detail' post.id %}" title="">
+                                        <img src="{{ post.image.url }}" alt="" class="img-fluid">
+                                        <div class="hovereffect"></div>
+                                    </a>
+                                </div><!-- end media -->
+                            </div><!-- end col -->
+
+                            <div class="blog-meta big-meta col-md-8">
+                                <span class="bg-aqua"><a href="{% url 'blog:detail' post.id %}" title="">{{ post.category }}</a></span>
+                                <h4><a href="{% url 'blog:detail' post.id %}" title="">{{ post.title }}</a></h4>
+                                <p>{{ post.title }}</p>
+                                <small><a href="{% url 'blog:detail' post.id %}" title=""></a></small>
+                                <small><a href="{% url 'blog:detail' post.id %}" title="">{{ post.publish }}</a></small>
+                                <small><a href="{% url 'blog:detail' post.id %}" title="">{{ post.author }}</a></small>
+                            </div><!-- end meta -->
+                        </div><!-- end blog-box -->
+                        {% endfor %}
+
+                        <hr class="invis">
+
+<!-- -----------------------***Banner******************************* -->
+                        <div class="row">
+                            <div class="col-lg-10 offset-lg-1">
+                                <div class="banner-spot clearfix">
+                                    <div class="banner-img">
+                                        <img src="{% static 'upload/banner_05.jpg' %}" alt="" class="img-fluid">
+                                    </div><!-- end banner-img -->
+                                </div><!-- end banner -->
+                            </div><!-- end col -->
+                        </div><!-- end row -->
+
+                        <hr class="invis">
+
+                        {% for post in sport %}
+                        <div class="blog-box row ">
+                            <div class="col-md-4">
+                                <div class="post-media">
+                                    <a href="garden-single.html" title="">
+                                        <img src="{{ post.image.url }}" alt="" class="img-fluid">
+                                        <div class="hovereffect"></div>
+                                    </a>
+                                </div><!-- end media -->
+                            </div><!-- end col -->
+
+                            <div class="blog-meta big-meta col-md-8">
+                                <span class="bg-aqua"><a href="{% url 'detail' post.id %}" title="" style="background-color: #06BBCC;">{{ post.category }}</a></span>
+                                <h4><a href="{% url 'detail' post.id %}" title="">{{ post.title }}</a></h4>
+                                <p>Aenean interdum arcu blandit, vehicula magna non, placerat elit. Mauris et pharetratortor. Suspendissea sodales urna. In at augue elit. Vivamus enim nibh, maximus ac felis nec, maximus tempor odio.</p>
+                                <small><a href="{% url 'detail' post.id %}" title=""><i class="fa fa-eye"></i> 4442</a></small>
+                                <small><a href="{% url 'detail' post.id %}" title=""> {{ post.publish }}</a></small>
+                                <small><a href="{% url 'detail' post.id %}" title="">{{ post.author }}</a></small>
+                            </div><!-- end meta -->
+                        </div><!-- end blog-box -->
+                        {% endfor %}
+                    </div><!-- end blog-list -->
+                </div><!-- end page-wrapper -->
+
+                <hr class="invis">
+
+<!-- ----------------------PAGINATION------------------------------------ -->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <nav aria-label="Page navigation">
+                                <ul class="pagination justify-content-start">
+                                    {% if posts.has_previous %}
+                                    <li class="page-item">
+                                        <a class="page-link" href="?page={{ posts.previous_page_number }}" aria-label="Previous" style="background-color: #06BBCC;">
+                                            <span aria-hidden="true">&laquo;</span>
+                                        </a>
+                                    </li>
+                                    {% endif %}
+
+                                    {% for num in posts.paginator.page_range %}
+                                    <li class="page-item {% if posts.number == num %}active{% endif %}" >
+                                        <a class="page-link" href="?page={{ num }}" style="background-color: #06BBCC;">{{ num }}</a>
+                                    </li>
+                                    {% endfor %}
+
+                                    {% if posts.has_next %}
+                                    <li class="page-item">
+                                        <a class="page-link" href="?page={{ posts.next_page_number }}" aria-label="Next">
+                                            <span aria-hidden="true" >&raquo;</span>
+                                        </a>
+                                    </li>
+                                    {% endif %}
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+
+            </div><!-- end col -->
+<!-- ----------------------RECHERCHE-------------------------------------------- -->
+            <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                <div class="sidebar">
+                    <div class="widget">
+                        <h2 class="widget-title">Search</h2>
+                        <form class="form-inline search-form" method="get" action="{% url 'blog:post_list' %}">
+                            <div class="form-group">
+                                <input 
+                                    type="text" 
+                                    class="form-control" 
+                                    name="q" 
+                                    placeholder="Search on the site"
+                                    value="{{ search_query|default:'' }}"
+                                >
+                            </div>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </form>
+                    </div>
+                    
+                    <!-- <div class="widget">
+                        <h2 class="widget-title">Search</h2>
+                        <form class="form-inline search-form">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Search on the site">
+                            </div>
+                            <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>
+                        </form>
+                    </div> -->
+                    <!-- end widget -->
+<!-- RECENT POST--------------------------------- -->
+                    <div class="widget">
+                        <h2 class="widget-title">Recent Posts</h2>
+                        <div class="blog-list-widget">
+                            {% for post in dernier_posts %}
+                            <div class="list-group">
+                                <a href="{% url 'blog:detail' post.id %}" class="list-group-item list-group-item-action flex-column align-items-start">
+                                    <div class="w-100 justify-content-between">
+                                        <img src="{{ post.image.url }}" alt="" class="img-fluid float-left">
+                                        <h5 class="mb-1">{{ post.title }} </h5>
+                                        <small>{{ post.publish }}</small>
+                                    </div>
+                                </a>
+                            </div>
+                            {% endfor %}
+                        </div><!-- end blog-list -->
+                    </div><!-- end widget -->
+
+                    <!-- RECENT POST--------------------------------- -->
+                    <div class="widget">
+                        <h2 class="widget-title">Post Populaires</h2>
+                        <div class="blog-list-widget">
+                            {% for post in populaires %}
+                            <div class="list-group">
+                                <a href="{% url 'blog:detail' post.id %}" class="list-group-item list-group-item-action flex-column align-items-start">
+                                    <div class="w-100 justify-content-between">
+                                        <img src="{{ post.image.url }}" alt="" class="img-fluid float-left">
+                                        <h5 class="mb-1">{{ post.title }} </h5>
+                                        <small>{{ post.publish }}</small>
+                                    </div>
+                                </a>
+                            </div>
+                            {% endfor %}
+                        </div><!-- end blog-list -->
+                    </div><!-- end widget -->
+<!-- -------------------------------------ADVERTISING----------------- -->
+                    <div class="widget">
+                        <h2 class="widget-title">Publicités</h2>
+                        <div class="banner-spot clearfix">
+                            <div class="banner-img">
+                                <img src="{% static 'upload/affiche.png' %}" alt="" class="img-fluid">
+                            </div><!-- end banner-img -->
+                        </div><!-- end banner -->
+                    </div><!-- end widget -->
+
+<!-- --------------------------- POPULAIRE------------ -->
+                    <div class="widget">
+                        <h2 class="widget-title"> Categories</h2>
+                        <div class="link-widget">
+                            <ul>
+                                {% for cat in categories %}
+                                <li><a href="{% url 'blog:category_post_list' cat.slug %}"> {{ cat.name }}</a></li>
+                                {% endfor %}
+                            </ul>
+                        </div><!-- end link-widget -->
+                    </div><!-- end widget -->
+                </div><!-- end sidebar -->
+            </div><!-- end col -->
+        </div><!-- end row -->
+    </div><!-- end container -->
+</section>
+{% endblock %}

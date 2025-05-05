@@ -1,0 +1,102 @@
+
+{% extends 'homeapp/base.html' %}
+{% block content %}
+{% load static %}
+    <!-- Contact Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center text-primary px-3">Temoignez nos services</h6>
+                <h1 class="mb-5">Votre témoignage compte </h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <h5>Entrer en contact</h5>
+                    <p class="mb-4">N’hésitez pas à venir découvrir nos bibliothèques, à vous abonner et à profiter gratuitement de ses riches contenus en document.</a>.</p>
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-primary" style="width: 50px; height: 50px;">
+                            <i class="fa fa-map-marker-alt text-white"></i>
+                        </div>
+                        <div class="ms-3">
+                            <h5 class="text-primary">Adresse</h5>
+                            <p class="mb-0">Siège: Carré 837 C – Quartier Aidjèdo
+                                Bibliothèque de Godomey: Rue avant la polyclinique Biosso en quittant le carrefour Houedonou
+                                Bibliothèque de Calavi: Dans la rue du restaurant UNICO</p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-primary" style="width: 50px; height: 50px;">
+                            <i class="fa fa-phone-alt text-white"></i>
+                        </div>
+                        <div class="ms-3">
+                            <h5 class="text-primary">Mobile</h5>
+                            <p class="mb-0">+229 01 99 15 42 42</p>
+                        </div>
+                        <div class="ms-3">
+                            <h5 class="text-primary">Fixe</h5>
+                            <p class="mb-0">+229 01 99 15 42 42</p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-primary" style="width: 50px; height: 50px;">
+                            <i class="fa fa-envelope-open text-white"></i>
+                        </div>
+                        <div class="ms-3">
+                            <h5 class="text-primary">Email</h5>
+                            <p class="mb-0">contact@beninexcellence.org</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.679635276615!2d2.3359879!3d6.4138155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1024a9020c6b91e1%3A0x1ecdfca314de6d4a!2sBiblioth%C3%A8que%20BENIN%20EXCELLENCE!5e0!3m2!1sfr!2sfr!4v1633024800000!5m2!1sfr!2sfr"
+        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+                    </iframe>
+                </div>
+                <div class="col-lg-4 col-md-12 wow fadeInUp" data-wow-delay="0.5s">
+                    <form method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {% if messages %}
+                        <div class="messages">
+                            {% for message in messages %}
+                                <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}">
+                                    {{ message }}
+                                </div>
+                            {% endfor %}
+                        </div>
+                        {% endif %}
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="nom_prenom" name="nom_prenom" placeholder="Votre Nom et Prénom" required>
+                                    <label for="nom_prenom">Nom et Prénom</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input type="file" class="form-control" id="photo" name="photo" placeholder="Votre photo">
+                                    <label for="photo">Votre Photo</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="profession" name="profession" placeholder="Votre Profession" required>
+                                    <label for="profession">Votre Profession</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <textarea class="form-control" placeholder="Votre Message" id="message" name="message" style="height: 150px" required></textarea>
+                                    <label for="message">Votre Message</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-primary w-100 py-3" type="submit">Envoyer</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact End -->
+{% endblock %}

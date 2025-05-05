@@ -1,0 +1,49 @@
+{% extends 'homeapp/base.html' %}
+{% block content %}
+{% load static %}
+<!-- Bibliothèque Detail Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px; max-height:500px;">
+                <div class="position-relative h-100">
+                    <img class="img-fluid position-absolute w-100 h-100" src="{% static 'img/carousel-2.jpg' %}" alt="" style="object-fit: cover;">
+                </div>
+            </div>
+            <div class="col-lg-8 wow fadeInUp" data-wow-delay="0.3s">
+                <h6 class="section-title bg-white text-start text-primary pe-3">Actions socio-sanitaire en milieu carcéral</h6>
+                <h1 class="mb-4">Actions socio-sanitaire en milieu carcéral</h1>
+                <p class="mb-4">Bénin Excellence, c’est aussi une équipe de jeunes médecins et internes en médecine. Ils font des consultations et soins aux détenus des milieux carcéraux.
+                    Les médecins de Bénin Excellence se chargent d’honorer les ordonnances, par eux, délivrés et assurent le suivi des détenus présentant des cas de pathologie plus ou moins graves.
+                    Bénin Excellence soutient les femmes nourrices (détenues) par un appui médical accentué et l’achat des produits laitiers au profit des nouveaux nés.</p>
+
+                <h3 class=" bg-white text-start text-primary pe-3">Du point de vue éducatif</h3>
+                <p class="">Bénin Excellence a mis à la disposition des reclus de justice, des mini-bibliothèques pour les aider 
+                    à s’évader par la lecture. Les prisons dans lesquelles intervient notre organisation sont celles de Parakou, 
+                    Natitingou, Kandi, Ouidah, Lokossa, Abomey, Abomey-Calavi, Porto-Novo, Missérété et le centre de sauvegarde des
+                     mineurs d’Agblangandan. Les mini-bibliothèques des prisons de Cotonou et de Savalou sont en réorganisation. 
+                     Ces bibliothèques participent à la rééducation des personnes en situation de détention. Par ailleurs,
+                      elles constituent une source d’épanouissement et un moyen de réorientation professionnelle après leur sortie 
+                      de prison. Les ouvrages scolaires, de formation professionnelle, d’auto-entrepreneuriat et bien d’autres
+                       domaines font partie de la collection d’ouvrages qui sont offerts à ces personnes laissées pour compte.</p>
+                       <h3 class="bg-white text-start text-primary ">Du point de vue social</h3>
+                <p class="">Bénin Excellence travaille à aider d’anciens détenus à leur réinsertion sociale. Elle paye, au besoin, 
+                    des cautions pour des détenus généralement mineurs en complément aux actions en prison. Bénin Excellence apporte 
+                    aussi au Centre de Sauvegarde des Mineurs d’Agblangandan à travers essentiellement un programme médical où un 
+                    médecin de Bénin Excellence est chargé de prodiguer des soins aux pensionnaires du Centre en cas d’urgences.</p>
+                <h3 class=" bg-white text-start text-primary pe-3">Suivi des activités en bibliothèque installées 
+                    dans les prisons</h3>
+                <p class="">Par semestre, Bénin Excellence fait un suivi évaluation de l’impact des actions de la
+                     jeune structure dans le domaine éducatif et sanitaire en milieu carcéral. Cette évaluation s’intéresse à des
+                      paramètres tels que l’intérêt des détenus pour la lecture, le taux de fréquentation mensuelle et l’impact 
+                      d’un point de vue comportemental sur les détenus bibliophiles. Cette évaluation est faite avec la contribution
+                       du bibliothécaire désigné en prison ainsi que le fonctionnaire de police assigné à la supervision des 
+                       activités en prison.</p>
+                
+                <a class="btn btn-primary py-3 px-5 mt-2" href="/">Retour à l'accueil</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Bibliothèque Detail End -->
+{% endblock %}
